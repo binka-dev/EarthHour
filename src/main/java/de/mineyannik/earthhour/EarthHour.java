@@ -44,7 +44,27 @@ public class EarthHour extends JavaPlugin implements Listener {
     public boolean isEarthHour()
     {
         Calendar d = Calendar.getInstance();
-        if (d.get(Calendar.DAY_OF_MONTH) == 28 && d.get(Calendar.MONTH) == 2) {
+        if (d.get(Calendar.DAY_OF_MONTH) == 28 && d.get(Calendar.MONTH) == 2 && d.get(Calendar.YEAR) == 2015) {
+            if (d.get(Calendar.HOUR_OF_DAY) == 20 && d.get(Calendar.MINUTE) >= 30) {
+                return true;
+            }
+
+            if (d.get(Calendar.HOUR_OF_DAY) == 21 && d.get(Calendar.MINUTE) <= 30) {
+                return true;
+            }
+        }
+        
+        if (d.get(Calendar.DAY_OF_MONTH) == 26 && d.get(Calendar.MONTH) == 2 && d.get(Calendar.YEAR) == 2016) {
+            if (d.get(Calendar.HOUR_OF_DAY) == 20 && d.get(Calendar.MINUTE) >= 30) {
+                return true;
+            }
+
+            if (d.get(Calendar.HOUR_OF_DAY) == 21 && d.get(Calendar.MINUTE) <= 30) {
+                return true;
+            }
+        }
+        
+        if (d.get(Calendar.DAY_OF_MONTH) == 25 && d.get(Calendar.MONTH) == 2 && d.get(Calendar.YEAR) == 2017) {
             if (d.get(Calendar.HOUR_OF_DAY) == 20 && d.get(Calendar.MINUTE) >= 30) {
                 return true;
             }
